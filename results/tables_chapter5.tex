@@ -1,0 +1,30 @@
+% Tự động sinh bởi export_latex_tables.py; kiểm tra số liệu và caption trước khi đưa vào báo cáo.
+\begin{table}[htbp]
+\centering
+\caption{Đặc điểm cấu trúc ma trận DC Power Flow trên các hệ thống IEEE}
+\label{tab:dc-matrix-statistics}
+\begin{tabular}{lrrrrr}
+\hline
+Hệ thống & Số ẩn & Số nhánh & $nnz(B')$ & Mật độ (phần trăm) & CSR (KB) \\
+\hline
+case14 & 13 & 20 & 49 & 28.99 & 0.63 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{So sánh kết quả các phương pháp lặp trên bài toán DC Power Flow}
+\label{tab:dc-solver-comparison}
+\small
+\begin{tabular}{llrrrr}
+\hline
+Hệ thống & Phương pháp & $\omega$ & Số vòng & Phần dư tương đối & Thời gian (s) \\
+\hline
+case14 & Jacobi & -- & 498 & 9.968e-09 & 0.004945 \\
+case14 & Gauss-Seidel & 1.000 & 254 & 9.393e-09 & 0.006535 \\
+case14 & SOR & 1.600 & 43 & 9.279e-09 & 0.001057 \\
+case14 & SSOR & 1.150 & 165 & 9.936e-09 & 0.007619 \\
+\hline
+\end{tabular}
+\end{table}

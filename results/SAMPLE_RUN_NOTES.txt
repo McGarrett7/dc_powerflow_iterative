@@ -1,0 +1,27 @@
+KET QUA MAU - IEEE 14-BUS
+
+Lệnh chạy:
+python run_experiments.py --cases case14 --repeats 3 --tol 1e-8 --max-iter 200000
+
+Kết quả thực tế trong lần chạy được đóng gói:
+- Ma trận rút gọn: 13 x 13
+- Số nhánh đang vận hành: 20
+- Số phần tử khác không: 49
+- Mật độ phần tử khác không: 28.9941%
+- Dung lượng CSR: 644 bytes (không gồm overhead Python/SciPy object)
+- Jacobi: 498 vòng, residual 9.968e-09
+- Gauss-Seidel: 254 vòng, residual 9.393e-09
+- SOR: omega=1.60, 43 vòng, residual 9.279e-09
+- SSOR: omega=1.15, 165 vòng, residual 9.936e-09
+
+Thời gian mẫu trên môi trường chạy của ChatGPT (chỉ tham khảo, phụ thuộc phần cứng):
+- Jacobi: 0.004945 s
+- Gauss-Seidel: 0.006535 s
+- SOR: 0.001057 s
+- SSOR: 0.007619 s
+
+Sai số góc pha vô cùng so với nghiệm tham chiếu đều nhỏ hơn 3.5e-7 độ.
+Tổng công suất nút suy ra từ Bbus*theta + Pbusinj xấp xỉ 0 MW.
+
+Đây chỉ là kết quả mẫu đã chạy cho IEEE 14-bus, không phải kết quả cho các case 30/57/118/300.
+Không dùng thời gian mẫu này thay thế kết quả đo trên máy tính dùng để thực hiện báo cáo của bạn.
